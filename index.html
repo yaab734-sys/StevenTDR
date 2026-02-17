@@ -107,6 +107,10 @@
                 transform: translateY(0);
             }
         }
+
+        .clip-button {
+            clip-path: polygon(5% 0%, 100% 0%, 95% 100%, 0% 100%);
+        }
     </style>
 </head>
 
@@ -157,6 +161,10 @@
                             class="btn-action px-10 py-5 text-lg font-black italic uppercase tracking-tighter shadow-lg shadow-gym-red/20">
                             Configurar mi Rutina
                         </button>
+                        <button onclick="showSection('ia')"
+                            class="px-10 py-5 text-lg font-black italic uppercase tracking-tighter bg-zinc-900 border border-zinc-800 hover:bg-zinc-800 hover:text-gym-yellow transition-all clip-button">
+                            Hablar con Genius IA
+                        </button>
                     </div>
                 </div>
                 <div class="relative">
@@ -194,7 +202,8 @@
                     GeniusIA tu asistente deportivo personal. ¿En que puedo ayudarte?</div>
             </div>
             <div class="relative max-w-4xl mx-auto w-full group">
-                <input type="text" id="ia-input" placeholder="Cualquier pregunta relacionada con el fitness o la salud..."
+                <input type="text" id="ia-input"
+                    placeholder="Cualquier pregunta relacionada con el fitness o la salud..."
                     class="w-full bg-zinc-900/90 border border-zinc-800 rounded-2xl px-8 py-6 pr-24 focus:outline-none focus:border-gym-red transition-all">
                 <button onclick="askIA()"
                     class="absolute right-4 top-4 bottom-4 bg-gym-red text-white px-6 rounded-xl font-black uppercase italic tracking-tighter">Consultar</button>
@@ -813,7 +822,13 @@
             chatBox.scrollTop = chatBox.scrollHeight;
         }
 
-        window.onload = () => showSection('inicio');
+        window.onload = () => {
+            showSection('inicio');
+            // Permitir enviar con Enter
+            document.getElementById('ia-input').addEventListener('keydown', (e) => {
+                if (e.key === 'Enter') askIA();
+            });
+        };
     </script>
 </body>
 
