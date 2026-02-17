@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,18 +23,20 @@
             overflow-x: hidden;
         }
 
-        .font-bebas { font-family: 'Bebas Neue', sans-serif; }
-        
+        .font-bebas {
+            font-family: 'Bebas Neue', sans-serif;
+        }
+
         .card-premium {
             background: linear-gradient(145deg, #1a1a1a, #0a0a0a);
             border: 1px solid #222;
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
-        
+
         .card-premium:hover {
             border-color: var(--gym-red);
             transform: scale(1.02);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
         }
 
         .btn-action {
@@ -66,23 +69,47 @@
             margin: 0 2px;
             animation: bounce 1.3s infinite;
         }
+
         @keyframes bounce {
-            0%, 80%, 100% { transform: scale(0); }
-            40% { transform: scale(1); }
+
+            0%,
+            80%,
+            100% {
+                transform: scale(0);
+            }
+
+            40% {
+                transform: scale(1);
+            }
         }
 
-        .custom-scrollbar::-webkit-scrollbar { width: 5px; }
-        .custom-scrollbar::-webkit-scrollbar-thumb { background: #333; border-radius: 10px; }
-        
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #333;
+            border-radius: 10px;
+        }
+
         .animate-fade-in {
             animation: fadeIn 0.5s ease-out forwards;
         }
+
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
     </style>
 </head>
+
 <body class="selection:bg-gym-red selection:text-white">
 
     <!-- NAVBAR -->
@@ -92,12 +119,16 @@
                 <div class="bg-gym-red p-1 rounded-sm rotate-45">
                     <i class="fas fa-bolt text-white -rotate-45"></i>
                 </div>
-                <span class="text-3xl font-black italic tracking-tighter uppercase font-bebas">GYM<span class="text-gym-red">GENIUS</span></span>
+                <span class="text-3xl font-black italic tracking-tighter uppercase font-bebas">GYM<span
+                        class="text-gym-red">GENIUS</span></span>
             </div>
             <div class="hidden md:flex gap-10 font-bold uppercase text-xs tracking-[0.2em]">
-                <button onclick="showSection('inicio')" id="nav-inicio" class="hover:text-gym-yellow transition-all nav-active">Inicio</button>
-                <button onclick="showSection('rutinas')" id="nav-rutinas" class="hover:text-gym-yellow transition-all">Mis Rutinas</button>
-                <button onclick="showSection('ia')" id="nav-ia" class="hover:text-gym-red transition-all italic flex items-center gap-2">
+                <button onclick="showSection('inicio')" id="nav-inicio"
+                    class="hover:text-gym-yellow transition-all nav-active">Inicio</button>
+                <button onclick="showSection('rutinas')" id="nav-rutinas"
+                    class="hover:text-gym-yellow transition-all">Mis Rutinas</button>
+                <button onclick="showSection('ia')" id="nav-ia"
+                    class="hover:text-gym-red transition-all italic flex items-center gap-2">
                     Genius IA
                 </button>
             </div>
@@ -105,26 +136,32 @@
     </nav>
 
     <main class="max-w-7xl mx-auto p-6 min-h-[90vh]">
-        
+
         <!-- INICIO -->
         <section id="section-inicio" class="py-12 animate-fade-in">
             <div class="grid lg:grid-cols-2 gap-16 items-center">
                 <div class="space-y-8">
                     <div class="inline-block px-4 py-1 border-l-4 border-gym-red bg-gym-red/5">
-                        <span class="text-gym-red font-black tracking-widest uppercase text-xs">System v4.2 - Guías Técnicas</span>
+                        <span class="text-gym-red font-black tracking-widest uppercase text-xs">System v4.2 - Guías
+                            Técnicas</span>
                     </div>
-                    <h1 class="text-6xl md:text-8xl font-black leading-[0.9] italic uppercase font-bebas">DIVIDE Y <br><span class="text-gym-yellow">VENCERÁS</span></h1>
+                    <h1 class="text-6xl md:text-8xl font-black leading-[0.9] italic uppercase font-bebas">DIVIDE Y
+                        <br><span class="text-gym-yellow">VENCERÁS</span>
+                    </h1>
                     <p class="text-zinc-400 text-lg leading-relaxed max-w-lg border-l border-zinc-800 pl-6">
-                        Rutinas estructuradas en Empuje, Tracción y Pierna. Incluye guías de ejecución paso a paso detalladas para asegurar la técnica perfecta.
+                        Rutinas estructuradas en Empuje, Tracción y Pierna. Incluye guías de ejecución paso a paso
+                        detalladas para asegurar la técnica perfecta.
                     </p>
                     <div class="flex flex-col sm:flex-row gap-4">
-                        <button onclick="openQuest()" class="btn-action px-10 py-5 text-lg font-black italic uppercase tracking-tighter shadow-lg shadow-gym-red/20">
+                        <button onclick="openQuest()"
+                            class="btn-action px-10 py-5 text-lg font-black italic uppercase tracking-tighter shadow-lg shadow-gym-red/20">
                             Configurar mi Rutina
                         </button>
                     </div>
                 </div>
                 <div class="relative">
-                    <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=800&auto=format&fit=crop" class="rounded-[3rem] grayscale border border-zinc-800 shadow-2xl rotate-2" alt="Entrenamiento">
+                    <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=800&auto=format&fit=crop"
+                        class="rounded-[3rem] grayscale border border-zinc-800 shadow-2xl rotate-2" alt="Entrenamiento">
                 </div>
             </div>
         </section>
@@ -133,10 +170,13 @@
         <section id="section-rutinas" class="hidden py-10 animate-fade-in">
             <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
                 <div>
-                    <h2 class="text-5xl font-black italic uppercase font-bebas tracking-tighter">CICLO <span class="text-gym-red">PUSH PULL LEGS</span></h2>
-                    <p class="text-zinc-500 font-medium mt-2">Variedad total: 4 ejercicios únicos por sesión con instrucciones ampliadas.</p>
+                    <h2 class="text-5xl font-black italic uppercase font-bebas tracking-tighter">CICLO <span
+                            class="text-gym-red">PUSH PULL LEGS</span></h2>
+                    <p class="text-zinc-500 font-medium mt-2">Variedad total: 4 ejercicios únicos por sesión con
+                        instrucciones ampliadas.</p>
                 </div>
-                <button onclick="openQuest()" class="text-xs font-black tracking-widest px-8 py-4 bg-zinc-900 border border-zinc-800 rounded-full hover:bg-zinc-800 hover:text-gym-yellow transition-all uppercase">
+                <button onclick="openQuest()"
+                    class="text-xs font-black tracking-widest px-8 py-4 bg-zinc-900 border border-zinc-800 rounded-full hover:bg-zinc-800 hover:text-gym-yellow transition-all uppercase">
                     Reiniciar Ciclo
                 </button>
             </div>
@@ -148,235 +188,254 @@
 
         <!-- SECCIÓN IA -->
         <section id="section-ia" class="hidden py-10 h-[calc(100vh-180px)] flex flex-col animate-fade-in">
-            <div id="chat-box" class="flex-1 overflow-y-auto card-premium rounded-[2.5rem] p-8 mb-6 space-y-6 custom-scrollbar"></div>
+            <div id="chat-box"
+                class="flex-1 overflow-y-auto card-premium rounded-[2.5rem] p-8 mb-6 space-y-6 custom-scrollbar"></div>
             <div class="relative max-w-4xl mx-auto w-full group">
-                <input type="text" id="ia-input" placeholder="Pregunta sobre la metodología PPL..." class="w-full bg-zinc-900/90 border border-zinc-800 rounded-2xl px-8 py-6 pr-24 focus:outline-none focus:border-gym-red transition-all">
-                <button onclick="askIA()" class="absolute right-4 top-4 bottom-4 bg-gym-red text-white px-6 rounded-xl font-black uppercase italic tracking-tighter">Consultar</button>
+                <input type="text" id="ia-input" placeholder="Pregunta sobre la metodología PPL..."
+                    class="w-full bg-zinc-900/90 border border-zinc-800 rounded-2xl px-8 py-6 pr-24 focus:outline-none focus:border-gym-red transition-all">
+                <button onclick="askIA()"
+                    class="absolute right-4 top-4 bottom-4 bg-gym-red text-white px-6 rounded-xl font-black uppercase italic tracking-tighter">Consultar</button>
             </div>
         </section>
 
     </main>
 
     <!-- MODAL CONFIGURACIÓN -->
-    <div id="quest-modal" class="fixed inset-0 bg-black/98 z-[60] hidden flex items-center justify-center p-6 backdrop-blur-xl">
-        <div class="bg-zinc-900 w-full max-w-2xl rounded-[3rem] border border-zinc-800 p-10 overflow-y-auto max-h-[90vh] custom-scrollbar">
-            <h2 class="text-4xl font-black italic uppercase font-bebas tracking-tighter mb-8 text-white">PARÁMETROS <span class="text-gym-yellow">DE ENTRENAMIENTO</span></h2>
+    <div id="quest-modal"
+        class="fixed inset-0 bg-black/98 z-[60] hidden flex items-center justify-center p-6 backdrop-blur-xl">
+        <div
+            class="bg-zinc-900 w-full max-w-2xl rounded-[3rem] border border-zinc-800 p-10 overflow-y-auto max-h-[90vh] custom-scrollbar">
+            <h2 class="text-4xl font-black italic uppercase font-bebas tracking-tighter mb-8 text-white">PARÁMETROS
+                <span class="text-gym-yellow">DE ENTRENAMIENTO</span>
+            </h2>
             <form id="gym-form" class="space-y-8">
                 <div>
-                    <label class="block text-[10px] font-black uppercase text-zinc-500 mb-3 tracking-[0.2em]">Objetivo Principal</label>
-                    <select id="q-goal" class="w-full bg-zinc-800 border border-zinc-700 rounded-2xl p-5 text-white font-bold outline-none appearance-none cursor-pointer">
+                    <label class="block text-[10px] font-black uppercase text-zinc-500 mb-3 tracking-[0.2em]">Objetivo
+                        Principal</label>
+                    <select id="q-goal"
+                        class="w-full bg-zinc-800 border border-zinc-700 rounded-2xl p-5 text-white font-bold outline-none appearance-none cursor-pointer">
                         <option value="fuerza">Fuerza Máxima (Potencia)</option>
                         <option value="hipertrofia" selected>Hipertrofia (Estética)</option>
                         <option value="resistencia">Resistencia (Cardio / HIIT)</option>
                     </select>
                 </div>
                 <div>
-                    <label class="block text-[10px] font-black uppercase text-zinc-500 mb-3 tracking-[0.2em]">Nivel</label>
-                    <select id="q-exp" class="w-full bg-zinc-800 border border-zinc-700 rounded-2xl p-5 text-white font-bold outline-none appearance-none cursor-pointer">
+                    <label
+                        class="block text-[10px] font-black uppercase text-zinc-500 mb-3 tracking-[0.2em]">Nivel</label>
+                    <select id="q-exp"
+                        class="w-full bg-zinc-800 border border-zinc-700 rounded-2xl p-5 text-white font-bold outline-none appearance-none cursor-pointer">
                         <option value="Novice">Principiante</option>
                         <option value="Intermediate" selected>Intermedio</option>
                         <option value="Advanced">Avanzado</option>
                     </select>
                 </div>
                 <div>
-                    <label class="block text-[10px] font-black uppercase text-zinc-500 mb-3 tracking-[0.2em]">Días Semanales</label>
-                    <select id="q-days" class="w-full bg-zinc-800 border border-zinc-700 rounded-2xl p-5 text-white font-bold outline-none appearance-none cursor-pointer">
+                    <label class="block text-[10px] font-black uppercase text-zinc-500 mb-3 tracking-[0.2em]">Días
+                        Semanales</label>
+                    <select id="q-days"
+                        class="w-full bg-zinc-800 border border-zinc-700 rounded-2xl p-5 text-white font-bold outline-none appearance-none cursor-pointer">
                         <option value="3">3 Días a la semana</option>
                         <option value="4">4 Días a la semana</option>
                         <option value="5">5 Días a la semana</option>
                         <option value="6">6 Días a la semana</option>
                     </select>
                 </div>
-                <button type="button" onclick="generatePPL()" class="w-full btn-action py-6 rounded-2xl text-xl font-black italic uppercase tracking-tighter">Generar Ciclo</button>
+                <button type="button" onclick="generatePPL()"
+                    class="w-full btn-action py-6 rounded-2xl text-xl font-black italic uppercase tracking-tighter">Generar
+                    Ciclo</button>
             </form>
         </div>
     </div>
 
     <!-- MODAL DETALLE -->
-    <div id="exercise-modal" class="fixed inset-0 bg-black/98 z-[70] hidden flex items-center justify-center p-6 backdrop-blur-2xl">
-        <div class="bg-zinc-900 w-full max-w-4xl rounded-[3rem] border border-zinc-800 p-10 md:p-14 relative shadow-2xl overflow-y-auto max-h-[95vh] custom-scrollbar">
-            <button onclick="closeExerciseModal()" class="absolute top-10 right-10 text-zinc-500 hover:text-white transition-all"><i class="fas fa-times text-3xl"></i></button>
+    <div id="exercise-modal"
+        class="fixed inset-0 bg-black/98 z-[70] hidden flex items-center justify-center p-6 backdrop-blur-2xl">
+        <div
+            class="bg-zinc-900 w-full max-w-4xl rounded-[3rem] border border-zinc-800 p-10 md:p-14 relative shadow-2xl overflow-y-auto max-h-[95vh] custom-scrollbar">
+            <button onclick="closeExerciseModal()"
+                class="absolute top-10 right-10 text-zinc-500 hover:text-white transition-all"><i
+                    class="fas fa-times text-3xl"></i></button>
             <div id="exercise-detail-content"></div>
         </div>
     </div>
 
     <script>
-        const apiKey = ""; 
+        const apiKey = "AIzaSyDBY060FeisjdKt4KMf1GzuAs5Z7Bo0EuQ"; // ⚠️ IMPORTANTE: Necesitas una API Key de Google (aistudio.google.com)
 
         // BASE DE DATOS FUERZA/HIPERTROFIA (AMPLIADA A 8 POR CATEGORÍA CON GUÍAS EXTENDIDAS)
         const strengthLibrary = {
             push: [
-                { 
-                    name: "Press de Banca Plano", 
-                    material: "Barra, Banco Plano, Rack de Seguridad", 
-                    focus: "Pectoral mayor (zona media)", 
-                    steps: ["Túmbate en el banco con los pies firmes en el suelo y retrae las escápulas (junta los omóplatos).", "Agarra la barra algo más ancho que tus hombros y sácala del rack.", "Baja la barra de forma controlada hasta tocar la parte baja del esternón.", "Empuja explosivamente hacia arriba hasta extender los brazos, sin bloquear los codos bruscamente."], 
-                    mistakes: "Abrir los codos a 90º (riesgo de hombro) o rebotar la barra en el pecho." 
+                {
+                    name: "Press de Banca Plano",
+                    material: "Barra, Banco Plano, Rack de Seguridad",
+                    focus: "Pectoral mayor (zona media)",
+                    steps: ["Túmbate en el banco con los pies firmes en el suelo y retrae las escápulas (junta los omóplatos).", "Agarra la barra algo más ancho que tus hombros y sácala del rack.", "Baja la barra de forma controlada hasta tocar la parte baja del esternón.", "Empuja explosivamente hacia arriba hasta extender los brazos, sin bloquear los codos bruscamente."],
+                    mistakes: "Abrir los codos a 90º (riesgo de hombro) o rebotar la barra en el pecho."
                 },
-                { 
-                    name: "Press Militar", 
-                    material: "Barra Olímpica", 
-                    focus: "Deltoides anterior y zona media", 
-                    steps: ["De pie, agarra la barra a la anchura de los hombros y apóyala en la parte alta del pecho.", "Contrae glúteos y abdomen para estabilizar la columna.", "Empuja la barra verticalmente pasando cerca de tu cara.", "Extiende los brazos por completo y mete ligeramente la cabeza entre los hombros al final."], 
-                    mistakes: "Arquear excesivamente la zona lumbar al subir el peso." 
+                {
+                    name: "Press Militar",
+                    material: "Barra Olímpica",
+                    focus: "Deltoides anterior y zona media",
+                    steps: ["De pie, agarra la barra a la anchura de los hombros y apóyala en la parte alta del pecho.", "Contrae glúteos y abdomen para estabilizar la columna.", "Empuja la barra verticalmente pasando cerca de tu cara.", "Extiende los brazos por completo y mete ligeramente la cabeza entre los hombros al final."],
+                    mistakes: "Arquear excesivamente la zona lumbar al subir el peso."
                 },
-                { 
-                    name: "Press Inclinado Mancuernas", 
-                    material: "Mancuernas, Banco Inclinado (30-45º)", 
-                    focus: "Pectoral mayor (Haz clavicular/Superior)", 
-                    steps: ["Ajusta el banco a unos 30 o 45 grados de inclinación.", "Sube las mancuernas con ayuda de las rodillas hasta los hombros.", "Empuja hacia arriba convergiendo ligeramente las mancuernas sin chocarlas.", "Baja controladamente hasta que las manos estén a la altura del pecho."], 
-                    mistakes: "Usar demasiada inclinación (convirtiéndolo en trabajo de hombro)." 
+                {
+                    name: "Press Inclinado Mancuernas",
+                    material: "Mancuernas, Banco Inclinado (30-45º)",
+                    focus: "Pectoral mayor (Haz clavicular/Superior)",
+                    steps: ["Ajusta el banco a unos 30 o 45 grados de inclinación.", "Sube las mancuernas con ayuda de las rodillas hasta los hombros.", "Empuja hacia arriba convergiendo ligeramente las mancuernas sin chocarlas.", "Baja controladamente hasta que las manos estén a la altura del pecho."],
+                    mistakes: "Usar demasiada inclinación (convirtiéndolo en trabajo de hombro)."
                 },
-                { 
-                    name: "Fondos de Pecho", 
-                    material: "Barras Paralelas", 
-                    focus: "Pectoral inferior y tríceps", 
-                    steps: ["Súbete a las paralelas y cruza los pies.", "Inclina el torso hacia adelante para enfatizar el pecho.", "Baja flexionando los codos hasta sentir un buen estiramiento.", "Empuja para volver a la posición inicial manteniendo la inclinación."], 
-                    mistakes: "Mantener el tronco demasiado vertical (enfatiza tríceps, no pecho)." 
+                {
+                    name: "Fondos de Pecho",
+                    material: "Barras Paralelas",
+                    focus: "Pectoral inferior y tríceps",
+                    steps: ["Súbete a las paralelas y cruza los pies.", "Inclina el torso hacia adelante para enfatizar el pecho.", "Baja flexionando los codos hasta sentir un buen estiramiento.", "Empuja para volver a la posición inicial manteniendo la inclinación."],
+                    mistakes: "Mantener el tronco demasiado vertical (enfatiza tríceps, no pecho)."
                 },
-                { 
-                    name: "Elevaciones Laterales", 
-                    material: "Mancuernas", 
-                    focus: "Deltoides medial (anchura de hombro)", 
-                    steps: ["De pie, con una mancuerna en cada mano y codos ligeramente flexionados.", "Eleva los brazos hacia los lados hasta la altura de los hombros.", "Imagina que estás vertiendo agua de una jarra al subir.", "Baja lentamente resistiendo la gravedad."], 
-                    mistakes: "Usar impulso del torso o subir las manos por encima de los hombros." 
+                {
+                    name: "Elevaciones Laterales",
+                    material: "Mancuernas",
+                    focus: "Deltoides medial (anchura de hombro)",
+                    steps: ["De pie, con una mancuerna en cada mano y codos ligeramente flexionados.", "Eleva los brazos hacia los lados hasta la altura de los hombros.", "Imagina que estás vertiendo agua de una jarra al subir.", "Baja lentamente resistiendo la gravedad."],
+                    mistakes: "Usar impulso del torso o subir las manos por encima de los hombros."
                 },
-                { 
-                    name: "Press Landmine", 
-                    material: "Barra en esquina (Landmine)", 
-                    focus: "Deltoides anterior y Pectoral superior", 
-                    steps: ["Coloca un extremo de la barra en una esquina o soporte landmine.", "Agarra el otro extremo con una mano y adopta una postura estable.", "Empuja la barra hacia arriba y adelante en diagonal.", "Mantén el core apretado para evitar rotaciones del tronco."], 
-                    mistakes: "Rotar el tronco excesivamente o no bloquear el abdomen." 
+                {
+                    name: "Press Landmine",
+                    material: "Barra en esquina (Landmine)",
+                    focus: "Deltoides anterior y Pectoral superior",
+                    steps: ["Coloca un extremo de la barra en una esquina o soporte landmine.", "Agarra el otro extremo con una mano y adopta una postura estable.", "Empuja la barra hacia arriba y adelante en diagonal.", "Mantén el core apretado para evitar rotaciones del tronco."],
+                    mistakes: "Rotar el tronco excesivamente o no bloquear el abdomen."
                 },
-                { 
-                    name: "Aperturas en Polea", 
-                    material: "Máquina de Poleas cruzadas", 
-                    focus: "Pectoral (Aislamiento y Estiramiento)", 
-                    steps: ["Colócate en medio de las poleas y agarra los manillares.", "Da un paso adelante y mantén los codos semiflexionados.", "Junta las manos frente a tu pecho apretando el pectoral.", "Regresa controladamente sintiendo el estiramiento completo."], 
-                    mistakes: "Empujar con los hombros o estirar los brazos completamente." 
+                {
+                    name: "Aperturas en Polea",
+                    material: "Máquina de Poleas cruzadas",
+                    focus: "Pectoral (Aislamiento y Estiramiento)",
+                    steps: ["Colócate en medio de las poleas y agarra los manillares.", "Da un paso adelante y mantén los codos semiflexionados.", "Junta las manos frente a tu pecho apretando el pectoral.", "Regresa controladamente sintiendo el estiramiento completo."],
+                    mistakes: "Empujar con los hombros o estirar los brazos completamente."
                 },
-                { 
-                    name: "Rompecráneos", 
-                    material: "Barra Z o Mancuernas", 
-                    focus: "Tríceps (Cables largas)", 
-                    steps: ["Túmbate en un banco plano sosteniendo la barra sobre tu pecho.", "Flexiona solo los codos bajando la barra hacia tu frente o detrás de la cabeza.", "Mantén los codos cerrados y apuntando al techo.", "Extiende los brazos para volver a la posición inicial."], 
-                    mistakes: "Abrir los codos hacia afuera durante el movimiento." 
+                {
+                    name: "Rompecráneos",
+                    material: "Barra Z o Mancuernas",
+                    focus: "Tríceps (Cables largas)",
+                    steps: ["Túmbate en un banco plano sosteniendo la barra sobre tu pecho.", "Flexiona solo los codos bajando la barra hacia tu frente o detrás de la cabeza.", "Mantén los codos cerrados y apuntando al techo.", "Extiende los brazos para volver a la posición inicial."],
+                    mistakes: "Abrir los codos hacia afuera durante el movimiento."
                 }
             ],
             pull: [
-                { 
-                    name: "Dominadas Pronas", 
-                    material: "Barra fija de dominadas", 
-                    focus: "Dorsal Ancho (Anchura de espalda)", 
-                    steps: ["Cuélgate de la barra con agarre prono (palmas al frente), manos más anchas que hombros.", "Inicia el movimiento deprimiendo las escápulas (hombros abajo).", "Tira de tu cuerpo hasta que la barbilla pase la barra.", "Baja controladamente hasta estirar los brazos por completo."], 
-                    mistakes: "Realizar impulso con las piernas (kipping) o no estirar los brazos al bajar." 
+                {
+                    name: "Dominadas Pronas",
+                    material: "Barra fija de dominadas",
+                    focus: "Dorsal Ancho (Anchura de espalda)",
+                    steps: ["Cuélgate de la barra con agarre prono (palmas al frente), manos más anchas que hombros.", "Inicia el movimiento deprimiendo las escápulas (hombros abajo).", "Tira de tu cuerpo hasta que la barbilla pase la barra.", "Baja controladamente hasta estirar los brazos por completo."],
+                    mistakes: "Realizar impulso con las piernas (kipping) o no estirar los brazos al bajar."
                 },
-                { 
-                    name: "Remo con Barra", 
-                    material: "Barra Olímpica, Discos", 
-                    focus: "Dorsal y Espesor de espalda", 
-                    steps: ["Pies a anchura de hombros, agarra la barra y realiza una bisagra de cadera.", "Mantén la espalda recta casi paralela al suelo.", "Tira de la barra hacia tu ombligo llevando los codos hacia atrás.", "Aprieta la espalda un segundo y baja la barra controladamente."], 
-                    mistakes: "Encorvar la espalda baja (riesgo de lesión) o usar demasiado impulso." 
+                {
+                    name: "Remo con Barra",
+                    material: "Barra Olímpica, Discos",
+                    focus: "Dorsal y Espesor de espalda",
+                    steps: ["Pies a anchura de hombros, agarra la barra y realiza una bisagra de cadera.", "Mantén la espalda recta casi paralela al suelo.", "Tira de la barra hacia tu ombligo llevando los codos hacia atrás.", "Aprieta la espalda un segundo y baja la barra controladamente."],
+                    mistakes: "Encorvar la espalda baja (riesgo de lesión) o usar demasiado impulso."
                 },
-                { 
-                    name: "Jalón al Pecho", 
-                    material: "Máquina de Poleas altas", 
-                    focus: "Dorsal Ancho", 
-                    steps: ["Siéntate y ajusta el soporte para las piernas.", "Agarra la barra con una amplitud mayor a tus hombros.", "Lleva la barra hacia la parte superior de tu pecho inclinándote ligeramente atrás.", "Sube la barra controladamente hasta estirar los dorsales."], 
-                    mistakes: "Llevar la barra detrás de la nuca (riesgo cervical) o balancearse mucho." 
+                {
+                    name: "Jalón al Pecho",
+                    material: "Máquina de Poleas altas",
+                    focus: "Dorsal Ancho",
+                    steps: ["Siéntate y ajusta el soporte para las piernas.", "Agarra la barra con una amplitud mayor a tus hombros.", "Lleva la barra hacia la parte superior de tu pecho inclinándote ligeramente atrás.", "Sube la barra controladamente hasta estirar los dorsales."],
+                    mistakes: "Llevar la barra detrás de la nuca (riesgo cervical) o balancearse mucho."
                 },
-                { 
-                    name: "Remo Unilateral (Serrucho)", 
-                    material: "Mancuerna pesada, Banco", 
-                    focus: "Dorsal ancho y Serrato", 
-                    steps: ["Apoya una rodilla y una mano en el banco para estabilizarte.", "Con la mano libre, agarra la mancuerna y deja caer el hombro para estirar.", "Tira de la mancuerna hacia tu cadera (no hacia el pecho).", "Baja lentamente sintiendo cómo se estira el dorsal."], 
-                    mistakes: "Girar el torso para ayudar a subir el peso." 
+                {
+                    name: "Remo Unilateral (Serrucho)",
+                    material: "Mancuerna pesada, Banco",
+                    focus: "Dorsal ancho y Serrato",
+                    steps: ["Apoya una rodilla y una mano en el banco para estabilizarte.", "Con la mano libre, agarra la mancuerna y deja caer el hombro para estirar.", "Tira de la mancuerna hacia tu cadera (no hacia el pecho).", "Baja lentamente sintiendo cómo se estira el dorsal."],
+                    mistakes: "Girar el torso para ayudar a subir el peso."
                 },
-                { 
-                    name: "Facepull", 
-                    material: "Polea alta con cuerda", 
-                    focus: "Deltoides posterior y salud del hombro", 
-                    steps: ["Coloca la polea a la altura de la cara o más arriba.", "Agarra la cuerda con los pulgares hacia atrás.", "Tira de la cuerda hacia tu frente separando las manos al final.", "Concéntrate en juntar las escápulas y rotar los hombros externamente."], 
-                    mistakes: "Tirar hacia el pecho en lugar de a la cara." 
+                {
+                    name: "Facepull",
+                    material: "Polea alta con cuerda",
+                    focus: "Deltoides posterior y salud del hombro",
+                    steps: ["Coloca la polea a la altura de la cara o más arriba.", "Agarra la cuerda con los pulgares hacia atrás.", "Tira de la cuerda hacia tu frente separando las manos al final.", "Concéntrate en juntar las escápulas y rotar los hombros externamente."],
+                    mistakes: "Tirar hacia el pecho en lugar de a la cara."
                 },
-                { 
-                    name: "Curl de Bíceps Barra", 
-                    material: "Barra recta o Barra Z", 
-                    focus: "Bíceps braquial", 
-                    steps: ["De pie, agarra la barra a la anchura de los hombros.", "Mantén los codos pegados a los costados del cuerpo.", "Sube la barra contrayendo los bíceps hasta arriba.", "Baja lentamente resistiendo el peso."], 
-                    mistakes: "Mover los codos hacia adelante o balancear la espalda." 
+                {
+                    name: "Curl de Bíceps Barra",
+                    material: "Barra recta o Barra Z",
+                    focus: "Bíceps braquial",
+                    steps: ["De pie, agarra la barra a la anchura de los hombros.", "Mantén los codos pegados a los costados del cuerpo.", "Sube la barra contrayendo los bíceps hasta arriba.", "Baja lentamente resistiendo el peso."],
+                    mistakes: "Mover los codos hacia adelante o balancear la espalda."
                 },
-                { 
-                    name: "Remo Gironda", 
-                    material: "Polea baja con agarre estrecho", 
-                    focus: "Romboides, Trapecio medio y Dorsal", 
-                    steps: ["Siéntate con los pies en los soportes y rodillas semiflexionadas.", "Mantén la espalda recta y el pecho fuera.", "Tira del manillar hacia tu abdomen bajo.", "Deja que los brazos se estiren adelante sintiendo el dorsal."], 
-                    mistakes: "Balancear excesivamente la espalda baja adelante y atrás." 
+                {
+                    name: "Remo Gironda",
+                    material: "Polea baja con agarre estrecho",
+                    focus: "Romboides, Trapecio medio y Dorsal",
+                    steps: ["Siéntate con los pies en los soportes y rodillas semiflexionadas.", "Mantén la espalda recta y el pecho fuera.", "Tira del manillar hacia tu abdomen bajo.", "Deja que los brazos se estiren adelante sintiendo el dorsal."],
+                    mistakes: "Balancear excesivamente la espalda baja adelante y atrás."
                 },
-                { 
-                    name: "Shrugs (Encogimientos)", 
-                    material: "Mancuernas pesadas o Barra", 
-                    focus: "Trapecio superior", 
-                    steps: ["Sostén el peso con los brazos estirados a los lados.", "Eleva los hombros intentando tocar tus orejas.", "Mantén la contracción un segundo arriba.", "Baja los hombros completamente para estirar el trapecio."], 
-                    mistakes: "Rotar los hombros al subir (riesgo articular)." 
+                {
+                    name: "Shrugs (Encogimientos)",
+                    material: "Mancuernas pesadas o Barra",
+                    focus: "Trapecio superior",
+                    steps: ["Sostén el peso con los brazos estirados a los lados.", "Eleva los hombros intentando tocar tus orejas.", "Mantén la contracción un segundo arriba.", "Baja los hombros completamente para estirar el trapecio."],
+                    mistakes: "Rotar los hombros al subir (riesgo articular)."
                 }
             ],
             legs: [
-                { 
-                    name: "Sentadilla Libre", 
-                    material: "Barra, Rack de Sentadillas", 
-                    focus: "Cuádriceps, Glúteo y Core", 
-                    steps: ["Coloca la barra sobre los trapecios y pies a anchura de hombros.", "Inicia el movimiento llevando la cadera atrás y abajo.", "Baja hasta que la cadera esté debajo de las rodillas (romper paralelo).", "Empuja fuerte con toda la planta del pie para subir."], 
-                    mistakes: "Permitir que las rodillas colapsen hacia adentro (valgo) al subir." 
+                {
+                    name: "Sentadilla Libre",
+                    material: "Barra, Rack de Sentadillas",
+                    focus: "Cuádriceps, Glúteo y Core",
+                    steps: ["Coloca la barra sobre los trapecios y pies a anchura de hombros.", "Inicia el movimiento llevando la cadera atrás y abajo.", "Baja hasta que la cadera esté debajo de las rodillas (romper paralelo).", "Empuja fuerte con toda la planta del pie para subir."],
+                    mistakes: "Permitir que las rodillas colapsen hacia adentro (valgo) al subir."
                 },
-                { 
-                    name: "Peso Muerto Rumano", 
-                    material: "Barra Olímpica o Mancuernas", 
-                    focus: "Isquiotibiales y Glúteos", 
-                    steps: ["Sostén la barra con agarre prono y pies a anchura de caderas.", "Mantén las rodillas semiflexionadas pero fijas.", "Lleva la cadera hacia atrás mientras bajas el torso recto.", "Baja hasta sentir un fuerte estiramiento en los isquios y sube apretando glúteos."], 
-                    mistakes: "Redondear la espalda o convertirlo en una sentadilla flexionando rodillas." 
+                {
+                    name: "Peso Muerto Rumano",
+                    material: "Barra Olímpica o Mancuernas",
+                    focus: "Isquiotibiales y Glúteos",
+                    steps: ["Sostén la barra con agarre prono y pies a anchura de caderas.", "Mantén las rodillas semiflexionadas pero fijas.", "Lleva la cadera hacia atrás mientras bajas el torso recto.", "Baja hasta sentir un fuerte estiramiento en los isquios y sube apretando glúteos."],
+                    mistakes: "Redondear la espalda o convertirlo en una sentadilla flexionando rodillas."
                 },
-                { 
-                    name: "Prensa de Piernas", 
-                    material: "Máquina de Prensa Inclinada", 
-                    focus: "Cuádriceps (Volumen)", 
-                    steps: ["Coloca los pies en el centro de la plataforma a anchura de hombros.", "Baja la plataforma controladamente lo más profundo posible sin levantar la cadera.", "Empuja la plataforma con fuerza sin bloquear rodillas al final.", "Mantén la espalda baja pegada al respaldo siempre."], 
-                    mistakes: "Despegar la zona lumbar del asiento al bajar profundo." 
+                {
+                    name: "Prensa de Piernas",
+                    material: "Máquina de Prensa Inclinada",
+                    focus: "Cuádriceps (Volumen)",
+                    steps: ["Coloca los pies en el centro de la plataforma a anchura de hombros.", "Baja la plataforma controladamente lo más profundo posible sin levantar la cadera.", "Empuja la plataforma con fuerza sin bloquear rodillas al final.", "Mantén la espalda baja pegada al respaldo siempre."],
+                    mistakes: "Despegar la zona lumbar del asiento al bajar profundo."
                 },
-                { 
-                    name: "Curl Femoral Tumbado", 
-                    material: "Máquina de Curl Femoral", 
-                    focus: "Isquiotibiales (Aislamiento)", 
-                    steps: ["Ajusta el rodillo para que quede sobre tus talones.", "Mantén la cadera presionada contra el banco durante todo el movimiento.", "Flexiona las rodillas llevando los talones al glúteo.", "Baja de forma controlada estirando la pierna."], 
-                    mistakes: "Levantar la cadera del banco para ayudar a subir el peso." 
+                {
+                    name: "Curl Femoral Tumbado",
+                    material: "Máquina de Curl Femoral",
+                    focus: "Isquiotibiales (Aislamiento)",
+                    steps: ["Ajusta el rodillo para que quede sobre tus talones.", "Mantén la cadera presionada contra el banco durante todo el movimiento.", "Flexiona las rodillas llevando los talones al glúteo.", "Baja de forma controlada estirando la pierna."],
+                    mistakes: "Levantar la cadera del banco para ayudar a subir el peso."
                 },
-                { 
-                    name: "Zancadas Caminando", 
-                    material: "Mancuernas o Peso corporal", 
-                    focus: "Glúteo, Cuádriceps y Estabilidad", 
-                    steps: ["Da un paso largo hacia adelante.", "Baja la cadera hasta que la rodilla trasera roce el suelo.", "Empuja con la pierna delantera para dar el siguiente paso.", "Mantén el torso erguido durante todo el recorrido."], 
-                    mistakes: "Dar pasos muy cortos (carga la rodilla) o golpear el suelo con la rodilla." 
+                {
+                    name: "Zancadas Caminando",
+                    material: "Mancuernas o Peso corporal",
+                    focus: "Glúteo, Cuádriceps y Estabilidad",
+                    steps: ["Da un paso largo hacia adelante.", "Baja la cadera hasta que la rodilla trasera roce el suelo.", "Empuja con la pierna delantera para dar el siguiente paso.", "Mantén el torso erguido durante todo el recorrido."],
+                    mistakes: "Dar pasos muy cortos (carga la rodilla) o golpear el suelo con la rodilla."
                 },
-                { 
-                    name: "Extensiones de Cuádriceps", 
-                    material: "Máquina de Extensión", 
-                    focus: "Cuádriceps (Recto femoral)", 
-                    steps: ["Ajusta el respaldo para que tu rodilla coincida con el eje de la máquina.", "Extiende las piernas completamente y aprieta el cuádriceps 1 segundo.", "Baja lentamente en 3 segundos.", "No uses impulso, controla el movimiento."], 
-                    mistakes: "Dar patadas explosivas con inercia en lugar de contracción muscular." 
+                {
+                    name: "Extensiones de Cuádriceps",
+                    material: "Máquina de Extensión",
+                    focus: "Cuádriceps (Recto femoral)",
+                    steps: ["Ajusta el respaldo para que tu rodilla coincida con el eje de la máquina.", "Extiende las piernas completamente y aprieta el cuádriceps 1 segundo.", "Baja lentamente en 3 segundos.", "No uses impulso, controla el movimiento."],
+                    mistakes: "Dar patadas explosivas con inercia en lugar de contracción muscular."
                 },
-                { 
-                    name: "Hip Thrust", 
-                    material: "Barra, Banco y Almohadilla", 
-                    focus: "Glúteo Mayor (Máxima activación)", 
-                    steps: ["Apoya la parte baja de las escápulas en el banco.", "Coloca la barra sobre la cadera (usa almohadilla).", "Empuja con los talones y eleva la cadera hasta bloquear arriba.", "Mantén la tibia vertical al suelo en la posición final."], 
-                    mistakes: "Hiperextender la espalda baja en lugar de usar la cadera." 
+                {
+                    name: "Hip Thrust",
+                    material: "Barra, Banco y Almohadilla",
+                    focus: "Glúteo Mayor (Máxima activación)",
+                    steps: ["Apoya la parte baja de las escápulas en el banco.", "Coloca la barra sobre la cadera (usa almohadilla).", "Empuja con los talones y eleva la cadera hasta bloquear arriba.", "Mantén la tibia vertical al suelo en la posición final."],
+                    mistakes: "Hiperextender la espalda baja en lugar de usar la cadera."
                 },
-                { 
-                    name: "Elevación de Gemelos", 
-                    material: "Máquina de pie o Escalón", 
-                    focus: "Gemelos (Gastrocnemio)", 
-                    steps: ["Apoya la punta de los pies en el borde.", "Deja caer los talones lo máximo posible para estirar.", "Sube explosivamente hasta ponerte de puntillas.", "Haz una pausa arriba y baja lento."], 
-                    mistakes: "Rebotar en la parte baja sin controlar el rango de movimiento." 
+                {
+                    name: "Elevación de Gemelos",
+                    material: "Máquina de pie o Escalón",
+                    focus: "Gemelos (Gastrocnemio)",
+                    steps: ["Apoya la punta de los pies en el borde.", "Deja caer los talones lo máximo posible para estirar.", "Sube explosivamente hasta ponerte de puntillas.", "Haz una pausa arriba y baja lento."],
+                    mistakes: "Rebotar en la parte baja sin controlar el rango de movimiento."
                 }
             ]
         };
@@ -384,177 +443,177 @@
         // BASE DE DATOS CARDIO/RESISTENCIA (HIIT & METABOLIC) CON GUÍAS EXTENDIDAS
         const cardioLibrary = {
             push: [
-                { 
-                    name: "Burpees", 
-                    material: "Peso corporal", 
-                    focus: "Cardio Global y Potencia de Pecho", 
-                    steps: ["Realiza una sentadilla hasta tocar el suelo con las manos.", "Lanza las piernas atrás quedando en posición de plancha.", "Haz una flexión completa tocando el pecho con el suelo.", "Recoge las piernas rápidamente y salta verticalmente dando una palmada."], 
-                    mistakes: "Arquear la espalda baja al recoger las piernas o no saltar." 
+                {
+                    name: "Burpees",
+                    material: "Peso corporal",
+                    focus: "Cardio Global y Potencia de Pecho",
+                    steps: ["Realiza una sentadilla hasta tocar el suelo con las manos.", "Lanza las piernas atrás quedando en posición de plancha.", "Haz una flexión completa tocando el pecho con el suelo.", "Recoge las piernas rápidamente y salta verticalmente dando una palmada."],
+                    mistakes: "Arquear la espalda baja al recoger las piernas o no saltar."
                 },
-                { 
-                    name: "Wall Balls", 
-                    material: "Balón Medicinal, Pared", 
-                    focus: "Potencia de Piernas y Hombros", 
-                    steps: ["Sostén el balón frente a tu pecho.", "Realiza una sentadilla profunda (rompiendo el paralelo).", "Al subir, lanza el balón explosivamente hacia una diana en la pared.", "Recibe el balón amortiguando la caída directamente en la siguiente sentadilla."], 
-                    mistakes: "No bajar suficiente en la sentadilla o pausar entre recepción y lanzamiento." 
+                {
+                    name: "Wall Balls",
+                    material: "Balón Medicinal, Pared",
+                    focus: "Potencia de Piernas y Hombros",
+                    steps: ["Sostén el balón frente a tu pecho.", "Realiza una sentadilla profunda (rompiendo el paralelo).", "Al subir, lanza el balón explosivamente hacia una diana en la pared.", "Recibe el balón amortiguando la caída directamente en la siguiente sentadilla."],
+                    mistakes: "No bajar suficiente en la sentadilla o pausar entre recepción y lanzamiento."
                 },
-                { 
-                    name: "Mountain Climbers", 
-                    material: "Suelo / Esterilla", 
-                    focus: "Core y Resistencia de Hombros", 
-                    steps: ["Colócate en posición de plancha alta con brazos estirados.", "Lleva una rodilla hacia el pecho de forma explosiva.", "Alterna las piernas rápidamente como si corrieras en el sitio.", "Mantén la cadera baja y alineada con los hombros."], 
-                    mistakes: "Subir la cadera demasiado o rebotar el cuerpo." 
+                {
+                    name: "Mountain Climbers",
+                    material: "Suelo / Esterilla",
+                    focus: "Core y Resistencia de Hombros",
+                    steps: ["Colócate en posición de plancha alta con brazos estirados.", "Lleva una rodilla hacia el pecho de forma explosiva.", "Alterna las piernas rápidamente como si corrieras en el sitio.", "Mantén la cadera baja y alineada con los hombros."],
+                    mistakes: "Subir la cadera demasiado o rebotar el cuerpo."
                 },
-                { 
-                    name: "Push Press (Alta Rep)", 
-                    material: "Mancuernas ligeras", 
-                    focus: "Resistencia Muscular de Hombros", 
-                    steps: ["Carga las mancuernas sobre los hombros.", "Realiza una pequeña flexión de rodillas (dip).", "Usa el impulso de las piernas para lanzar el peso arriba.", "Baja controladamente y repite el ciclo con fluidez."], 
-                    mistakes: "Parar el ritmo entre repeticiones o hacer press estricto sin piernas." 
+                {
+                    name: "Push Press (Alta Rep)",
+                    material: "Mancuernas ligeras",
+                    focus: "Resistencia Muscular de Hombros",
+                    steps: ["Carga las mancuernas sobre los hombros.", "Realiza una pequeña flexión de rodillas (dip).", "Usa el impulso de las piernas para lanzar el peso arriba.", "Baja controladamente y repite el ciclo con fluidez."],
+                    mistakes: "Parar el ritmo entre repeticiones o hacer press estricto sin piernas."
                 },
-                { 
-                    name: "Battle Ropes (Slams)", 
-                    material: "Cuerdas de Batalla", 
-                    focus: "Potencia de tren superior y Core", 
-                    steps: ["Agarra los extremos de las cuerdas y baja a media sentadilla.", "Eleva ambos brazos por encima de la cabeza.", "Azota las cuerdas contra el suelo con máxima fuerza usando el abdomen.", "Repite sin perder la postura atlética."], 
-                    mistakes: "Usar solo los brazos sin involucrar el core o extender las piernas." 
+                {
+                    name: "Battle Ropes (Slams)",
+                    material: "Cuerdas de Batalla",
+                    focus: "Potencia de tren superior y Core",
+                    steps: ["Agarra los extremos de las cuerdas y baja a media sentadilla.", "Eleva ambos brazos por encima de la cabeza.", "Azota las cuerdas contra el suelo con máxima fuerza usando el abdomen.", "Repite sin perder la postura atlética."],
+                    mistakes: "Usar solo los brazos sin involucrar el core o extender las piernas."
                 },
-                { 
-                    name: "Flexiones Plyo", 
-                    material: "Suelo", 
-                    focus: "Potencia explosiva de empuje", 
-                    steps: ["Baja en posición de flexión normal.", "Empuja el suelo con la máxima fuerza posible.", "Intenta que tus manos se despeguen del suelo en el punto alto.", "Amortigua la caída flexionando los codos inmediatamente."], 
-                    mistakes: "Aterrizar con los codos bloqueados (riesgo de lesión) o perder tensión en el core." 
+                {
+                    name: "Flexiones Plyo",
+                    material: "Suelo",
+                    focus: "Potencia explosiva de empuje",
+                    steps: ["Baja en posición de flexión normal.", "Empuja el suelo con la máxima fuerza posible.", "Intenta que tus manos se despeguen del suelo en el punto alto.", "Amortigua la caída flexionando los codos inmediatamente."],
+                    mistakes: "Aterrizar con los codos bloqueados (riesgo de lesión) o perder tensión en el core."
                 },
-                { 
-                    name: "Boxing Shadow", 
-                    material: "Mancuernas 1kg (opcional)", 
-                    focus: "Cardio y resistencia de hombros", 
-                    steps: ["Mantén una guardia alta protegiendo la cara.", "Lanza golpes directos continuos extendiendo los brazos.", "Mueve los pies constantemente (juego de piernas).", "Mantén el ritmo alto durante todo el intervalo."], 
-                    mistakes: "Bajar la guardia por fatiga o dejar de mover los pies." 
+                {
+                    name: "Boxing Shadow",
+                    material: "Mancuernas 1kg (opcional)",
+                    focus: "Cardio y resistencia de hombros",
+                    steps: ["Mantén una guardia alta protegiendo la cara.", "Lanza golpes directos continuos extendiendo los brazos.", "Mueve los pies constantemente (juego de piernas).", "Mantén el ritmo alto durante todo el intervalo."],
+                    mistakes: "Bajar la guardia por fatiga o dejar de mover los pies."
                 },
-                { 
-                    name: "Bear Crawl", 
-                    material: "Suelo (espacio libre)", 
-                    focus: "Coordinación y estabilidad de hombros", 
-                    steps: ["Ponte en cuadrupedia pero con las rodillas en el aire (sin tocar suelo).", "Avanza moviendo mano derecha y pie izquierdo simultáneamente.", "Mantén la espalda plana como una mesa.", "Avanza rápido pero controlado."], 
-                    mistakes: "Elevar la cadera demasiado perdiendo la posición de oso." 
+                {
+                    name: "Bear Crawl",
+                    material: "Suelo (espacio libre)",
+                    focus: "Coordinación y estabilidad de hombros",
+                    steps: ["Ponte en cuadrupedia pero con las rodillas en el aire (sin tocar suelo).", "Avanza moviendo mano derecha y pie izquierdo simultáneamente.", "Mantén la espalda plana como una mesa.", "Avanza rápido pero controlado."],
+                    mistakes: "Elevar la cadera demasiado perdiendo la posición de oso."
                 }
             ],
             pull: [
-                { 
-                    name: "Remo en Máquina (Concept2)", 
-                    material: "Ergómetro de Remo", 
-                    focus: "Cardio Global y Cadena Posterior", 
-                    steps: ["Inicia el movimiento empujando fuerte con las piernas.", "Cuando las piernas estén casi rectas, inclina el torso atrás.", "Termina jalando el manillar al pecho.", "Invierte el orden para volver: brazos, torso, piernas."], 
-                    mistakes: "Jalar con los brazos antes de terminar el empuje de piernas." 
+                {
+                    name: "Remo en Máquina (Concept2)",
+                    material: "Ergómetro de Remo",
+                    focus: "Cardio Global y Cadena Posterior",
+                    steps: ["Inicia el movimiento empujando fuerte con las piernas.", "Cuando las piernas estén casi rectas, inclina el torso atrás.", "Termina jalando el manillar al pecho.", "Invierte el orden para volver: brazos, torso, piernas."],
+                    mistakes: "Jalar con los brazos antes de terminar el empuje de piernas."
                 },
-                { 
-                    name: "Kettlebell Swings", 
-                    material: "Kettlebell", 
-                    focus: "Cadena Posterior y Cardio", 
-                    steps: ["Inicia con una bisagra de cadera llevando la pesa entre las piernas.", "Extiende la cadera explosivamente (golpe de cadera).", "Deja que la pesa flote hasta la altura del pecho.", "Los brazos solo sostienen la pesa, no la levantan."], 
-                    mistakes: "Usar los hombros para subir la pesa en lugar de la cadera (es un ejercicio de piernas)." 
+                {
+                    name: "Kettlebell Swings",
+                    material: "Kettlebell",
+                    focus: "Cadena Posterior y Cardio",
+                    steps: ["Inicia con una bisagra de cadera llevando la pesa entre las piernas.", "Extiende la cadera explosivamente (golpe de cadera).", "Deja que la pesa flote hasta la altura del pecho.", "Los brazos solo sostienen la pesa, no la levantan."],
+                    mistakes: "Usar los hombros para subir la pesa en lugar de la cadera (es un ejercicio de piernas)."
                 },
-                { 
-                    name: "Jumping Pull Ups", 
-                    material: "Barra de dominadas, Cajón", 
-                    focus: "Resistencia Dorsal y Cardio", 
-                    steps: ["Usa un cajón para llegar fácil a la barra.", "Salta para ayudarte a subir la barbilla sobre la barra.", "Baja controladamente pero rápido.", "Usa el rebote del cajón para encadenar repeticiones."], 
-                    mistakes: "Golpear la barbilla con la barra o no estirar los brazos al bajar." 
+                {
+                    name: "Jumping Pull Ups",
+                    material: "Barra de dominadas, Cajón",
+                    focus: "Resistencia Dorsal y Cardio",
+                    steps: ["Usa un cajón para llegar fácil a la barra.", "Salta para ayudarte a subir la barbilla sobre la barra.", "Baja controladamente pero rápido.", "Usa el rebote del cajón para encadenar repeticiones."],
+                    mistakes: "Golpear la barbilla con la barra o no estirar los brazos al bajar."
                 },
-                { 
-                    name: "Battle Ropes (Waves)", 
-                    material: "Cuerdas de Batalla", 
-                    focus: "Resistencia de Brazos y Hombros", 
-                    steps: ["Adopta posición de media sentadilla.", "Mueve los brazos alternativamente arriba y abajo.", "Crea ondas rápidas y constantes que lleguen hasta el anclaje.", "Mantén el abdomen contraído para no mover el torso."], 
-                    mistakes: "Mover todo el cuerpo arriba y abajo en lugar de solo los brazos." 
+                {
+                    name: "Battle Ropes (Waves)",
+                    material: "Cuerdas de Batalla",
+                    focus: "Resistencia de Brazos y Hombros",
+                    steps: ["Adopta posición de media sentadilla.", "Mueve los brazos alternativamente arriba y abajo.", "Crea ondas rápidas y constantes que lleguen hasta el anclaje.", "Mantén el abdomen contraído para no mover el torso."],
+                    mistakes: "Mover todo el cuerpo arriba y abajo en lugar de solo los brazos."
                 },
-                { 
-                    name: "Tire Flips", 
-                    material: "Neumático grande", 
-                    focus: "Potencia Total del cuerpo", 
-                    steps: ["Colócate en sentadilla profunda con el pecho pegado al neumático.", "Agarra por debajo y empuja con las piernas hacia adelante y arriba (45º).", "Cuando el neumático suba, cambia las manos para empujarlo.", "Derríbalo con fuerza."], 
-                    mistakes: "Curvar la espalda al iniciar el levantamiento." 
+                {
+                    name: "Tire Flips",
+                    material: "Neumático grande",
+                    focus: "Potencia Total del cuerpo",
+                    steps: ["Colócate en sentadilla profunda con el pecho pegado al neumático.", "Agarra por debajo y empuja con las piernas hacia adelante y arriba (45º).", "Cuando el neumático suba, cambia las manos para empujarlo.", "Derríbalo con fuerza."],
+                    mistakes: "Curvar la espalda al iniciar el levantamiento."
                 },
-                { 
-                    name: "Renegade Row (Ligero)", 
-                    material: "Par de mancuernas", 
-                    focus: "Core Anti-rotación y Espalda", 
-                    steps: ["Ponte en posición de plancha sosteniendo las mancuernas.", "Realiza un remo con un brazo mientras el otro sostiene el peso.", "Evita que tu cadera gire mientras levantas el peso.", "Alterna los brazos controladamente."], 
-                    mistakes: "Balancear la cadera de lado a lado para compensar." 
+                {
+                    name: "Renegade Row (Ligero)",
+                    material: "Par de mancuernas",
+                    focus: "Core Anti-rotación y Espalda",
+                    steps: ["Ponte en posición de plancha sosteniendo las mancuernas.", "Realiza un remo con un brazo mientras el otro sostiene el peso.", "Evita que tu cadera gire mientras levantas el peso.", "Alterna los brazos controladamente."],
+                    mistakes: "Balancear la cadera de lado a lado para compensar."
                 },
-                { 
-                    name: "SkiErg", 
-                    material: "Máquina de Esquí", 
-                    focus: "Dorsal, Tríceps y Abdomen", 
-                    steps: ["Inicia con las manos arriba y el cuerpo extendido.", "Jala las cuerdas hacia abajo con fuerza usando el peso de tu cuerpo.", "Flexiona rodillas y cadera en el punto bajo.", "Vuelve a subir aprovechando la inercia."], 
-                    mistakes: "Tirar solo con los brazos sin usar la flexión del tronco." 
+                {
+                    name: "SkiErg",
+                    material: "Máquina de Esquí",
+                    focus: "Dorsal, Tríceps y Abdomen",
+                    steps: ["Inicia con las manos arriba y el cuerpo extendido.", "Jala las cuerdas hacia abajo con fuerza usando el peso de tu cuerpo.", "Flexiona rodillas y cadera en el punto bajo.", "Vuelve a subir aprovechando la inercia."],
+                    mistakes: "Tirar solo con los brazos sin usar la flexión del tronco."
                 },
-                { 
-                    name: "Sled Pull", 
-                    material: "Trineo con peso, Cuerda", 
-                    focus: "Espalda, Bíceps y Piernas", 
-                    steps: ["Mantén una posición de media sentadilla estable.", "Agarra la cuerda y jala el trineo hacia ti mano sobre mano.", "Mantén la espalda recta y el core activado.", "Usa las piernas para estabilizarte, no para tirar."], 
-                    mistakes: "Tirar solo de brazos curvando la espalda." 
+                {
+                    name: "Sled Pull",
+                    material: "Trineo con peso, Cuerda",
+                    focus: "Espalda, Bíceps y Piernas",
+                    steps: ["Mantén una posición de media sentadilla estable.", "Agarra la cuerda y jala el trineo hacia ti mano sobre mano.", "Mantén la espalda recta y el core activado.", "Usa las piernas para estabilizarte, no para tirar."],
+                    mistakes: "Tirar solo de brazos curvando la espalda."
                 }
             ],
             legs: [
-                { 
-                    name: "Box Jumps", 
-                    material: "Cajón pliométrico", 
-                    focus: "Potencia de Pierna explosiva", 
-                    steps: ["Párate frente al cajón a una distancia cómoda.", "Carga el salto flexionando cadera y llevando brazos atrás.", "Salta explosivamente y aterriza suavemente con ambos pies.", "Extiende la cadera completamente antes de bajar."], 
-                    mistakes: "Aterrizar con las piernas rígidas (golpe seco) o no extenderse arriba." 
+                {
+                    name: "Box Jumps",
+                    material: "Cajón pliométrico",
+                    focus: "Potencia de Pierna explosiva",
+                    steps: ["Párate frente al cajón a una distancia cómoda.", "Carga el salto flexionando cadera y llevando brazos atrás.", "Salta explosivamente y aterriza suavemente con ambos pies.", "Extiende la cadera completamente antes de bajar."],
+                    mistakes: "Aterrizar con las piernas rígidas (golpe seco) o no extenderse arriba."
                 },
-                { 
-                    name: "Salto a la Comba", 
-                    material: "Cuerda de saltar", 
-                    focus: "Gemelos y Cardio", 
-                    steps: ["Mantén los codos pegados a las costillas.", "El movimiento debe venir de las muñecas, no de los hombros.", "Salta sobre las puntas de los pies de forma reactiva.", "Mantén un ritmo constante y fluido."], 
-                    mistakes: "Saltar demasiado alto o mover los brazos excesivamente." 
+                {
+                    name: "Salto a la Comba",
+                    material: "Cuerda de saltar",
+                    focus: "Gemelos y Cardio",
+                    steps: ["Mantén los codos pegados a las costillas.", "El movimiento debe venir de las muñecas, no de los hombros.", "Salta sobre las puntas de los pies de forma reactiva.", "Mantén un ritmo constante y fluido."],
+                    mistakes: "Saltar demasiado alto o mover los brazos excesivamente."
                 },
-                { 
-                    name: "Jump Squats", 
-                    material: "Peso corporal", 
-                    focus: "Potencia de Cuádriceps", 
-                    steps: ["Realiza una sentadilla profunda.", "Desde abajo, explota verticalmente en un salto máximo.", "Amortigua la caída cayendo directamente en la siguiente sentadilla.", "Busca altura en cada repetición."], 
-                    mistakes: "Dejar que las rodillas se metan hacia adentro al aterrizar." 
+                {
+                    name: "Jump Squats",
+                    material: "Peso corporal",
+                    focus: "Potencia de Cuádriceps",
+                    steps: ["Realiza una sentadilla profunda.", "Desde abajo, explota verticalmente en un salto máximo.", "Amortigua la caída cayendo directamente en la siguiente sentadilla.", "Busca altura en cada repetición."],
+                    mistakes: "Dejar que las rodillas se metan hacia adentro al aterrizar."
                 },
-                { 
-                    name: "High Knees", 
-                    material: "Suelo", 
-                    focus: "Flexores de cadera y Cardio", 
-                    steps: ["Corre en el sitio elevando las rodillas hacia el pecho.", "Mantén el torso recto, no te inclines hacia atrás.", "Acompaña con un braceo enérgico.", "Busca la máxima frecuencia de pasos posible."], 
-                    mistakes: "Echar el cuerpo hacia atrás o no subir suficiente las rodillas." 
+                {
+                    name: "High Knees",
+                    material: "Suelo",
+                    focus: "Flexores de cadera y Cardio",
+                    steps: ["Corre en el sitio elevando las rodillas hacia el pecho.", "Mantén el torso recto, no te inclines hacia atrás.", "Acompaña con un braceo enérgico.", "Busca la máxima frecuencia de pasos posible."],
+                    mistakes: "Echar el cuerpo hacia atrás o no subir suficiente las rodillas."
                 },
-                { 
-                    name: "Zancadas con Salto", 
-                    material: "Suelo", 
-                    focus: "Coordinación y Potencia unilateral", 
-                    steps: ["Inicia en posición de zancada (lunge).", "Salta explosivamente y cambia las piernas en el aire.", "Aterriza suavemente en la posición opuesta.", "Mantén el equilibrio y el ritmo fluido."], 
-                    mistakes: "Golpear la rodilla trasera contra el suelo al bajar." 
+                {
+                    name: "Zancadas con Salto",
+                    material: "Suelo",
+                    focus: "Coordinación y Potencia unilateral",
+                    steps: ["Inicia en posición de zancada (lunge).", "Salta explosivamente y cambia las piernas en el aire.", "Aterriza suavemente en la posición opuesta.", "Mantén el equilibrio y el ritmo fluido."],
+                    mistakes: "Golpear la rodilla trasera contra el suelo al bajar."
                 },
-                { 
-                    name: "Escaleras / Stairmaster", 
-                    material: "Escaleras o Máquina", 
-                    focus: "Glúteo y Resistencia cardiovascular", 
-                    steps: ["Sube los escalones manteniendo un ritmo constante.", "Intenta no apoyarte en los pasamanos para activar el core.", "Pisa con toda la planta del pie para activar el glúteo.", "Mantén la mirada al frente y el pecho erguido."], 
-                    mistakes: "Dejar todo el peso muerto sobre la barandilla o pisar solo con puntas." 
+                {
+                    name: "Escaleras / Stairmaster",
+                    material: "Escaleras o Máquina",
+                    focus: "Glúteo y Resistencia cardiovascular",
+                    steps: ["Sube los escalones manteniendo un ritmo constante.", "Intenta no apoyarte en los pasamanos para activar el core.", "Pisa con toda la planta del pie para activar el glúteo.", "Mantén la mirada al frente y el pecho erguido."],
+                    mistakes: "Dejar todo el peso muerto sobre la barandilla o pisar solo con puntas."
                 },
-                { 
-                    name: "Thrusters", 
-                    material: "Mancuernas ligeras o Barra", 
-                    focus: "Cuerpo Completo (Metabólico)", 
-                    steps: ["Sostén el peso a la altura de los hombros en posición frontal.", "Realiza una sentadilla completa.", "Aprovecha el impulso de subida para hacer un press de hombros.", "Encadena el movimiento en un solo fluido continuo."], 
-                    mistakes: "Separar la sentadilla del press (hacer pausa en el medio)." 
+                {
+                    name: "Thrusters",
+                    material: "Mancuernas ligeras o Barra",
+                    focus: "Cuerpo Completo (Metabólico)",
+                    steps: ["Sostén el peso a la altura de los hombros en posición frontal.", "Realiza una sentadilla completa.", "Aprovecha el impulso de subida para hacer un press de hombros.", "Encadena el movimiento en un solo fluido continuo."],
+                    mistakes: "Separar la sentadilla del press (hacer pausa en el medio)."
                 },
-                { 
-                    name: "Sled Push (Empuje Trineo)", 
-                    material: "Trineo con peso, Pista", 
-                    focus: "Potencia de Pierna pura", 
-                    steps: ["Agarra los postes del trineo con brazos estirados (o doblados si pesa mucho).", "Inclina el cuerpo en un ángulo de 45 grados.", "Empuja clavando las puntas de los pies en el suelo.", "Da pasos cortos, rápidos y potentes."], 
-                    mistakes: "Llevar la cadera demasiado alta (pierde fuerza de empuje)." 
+                {
+                    name: "Sled Push (Empuje Trineo)",
+                    material: "Trineo con peso, Pista",
+                    focus: "Potencia de Pierna pura",
+                    steps: ["Agarra los postes del trineo con brazos estirados (o doblados si pesa mucho).", "Inclina el cuerpo en un ángulo de 45 grados.", "Empuja clavando las puntas de los pies en el suelo.", "Da pasos cortos, rápidos y potentes."],
+                    mistakes: "Llevar la cadera demasiado alta (pierde fuerza de empuje)."
                 }
             ]
         };
@@ -563,7 +622,7 @@
             document.querySelectorAll('section').forEach(s => s.classList.add('hidden'));
             document.getElementById('section-' + id).classList.remove('hidden');
             document.querySelectorAll('nav button').forEach(b => b.classList.remove('nav-active'));
-            if(document.getElementById('nav-' + id)) document.getElementById('nav-' + id).classList.add('nav-active');
+            if (document.getElementById('nav-' + id)) document.getElementById('nav-' + id).classList.add('nav-active');
         };
 
         const openQuest = () => document.getElementById('quest-modal').classList.remove('hidden');
@@ -589,32 +648,32 @@
             };
 
             // Nombres de los días adaptados
-            const dayTypes = goal === 'resistencia' 
-                ? ["Cardio Empuje", "Cardio Tracción", "Cardio Pierna"] 
+            const dayTypes = goal === 'resistencia'
+                ? ["Cardio Empuje", "Cardio Tracción", "Cardio Pierna"]
                 : ["Empuje (Push)", "Tracción (Pull)", "Pierna (Legs)"];
 
-            for(let i = 0; i < days; i++) {
+            for (let i = 0; i < days; i++) {
                 const currentType = i % 3; // 0: Push, 1: Pull, 2: Legs
                 const typeKey = currentType === 0 ? 'push' : currentType === 1 ? 'pull' : 'legs';
-                
+
                 const dayCard = document.createElement('div');
                 dayCard.className = "card-premium p-8 rounded-[3rem] animate-fade-in";
-                
+
                 let html = `
-                    <div class="mb-6 border-b border-zinc-800 pb-4">
+                <div class="mb-6 border-b border-zinc-800 pb-4">
                         <span class="text-gym-red font-black uppercase text-[10px] tracking-widest">${dayTypes[currentType]}</span>
                         <div class="flex justify-between items-end">
-                            <h3 class="text-3xl font-black italic font-bebas uppercase text-white mt-1">DÍA ${i+1}</h3>
+                            <h3 class="text-3xl font-black italic font-bebas uppercase text-white mt-1">DÍA ${i + 1}</h3>
                             <span class="text-[9px] text-zinc-500 uppercase font-bold">${styleLabel}</span>
                         </div>
-                    </div>
+                    </div >
                     <div class="space-y-3">`;
 
-                // Seleccionar 4 ejercicios únicos por día
+                // Seleccionar 6 ejercicios únicos por día
                 // Si el pool se vacía, reiniciamos (fallback)
-                if(pools[typeKey].length < 4) pools[typeKey] = [...sourceLibrary[typeKey]];
+                if (pools[typeKey].length < 6) pools[typeKey] = [...sourceLibrary[typeKey]];
 
-                for(let j = 0; j < 4; j++) {
+                for (let j = 0; j < 6; j++) {
                     const randomIndex = Math.floor(Math.random() * pools[typeKey].length);
                     const ex = pools[typeKey].splice(randomIndex, 1)[0];
 
@@ -665,13 +724,13 @@
                         <ul class="space-y-6">
                             ${ex.steps.map((step, i) => `
                                 <li class="flex gap-4">
-                                    <span class="flex-shrink-0 w-8 h-8 rounded-full bg-zinc-800 border border-zinc-700 flex items-center justify-center text-[10px] font-black text-gym-yellow">${i+1}</span>
+                                    <span class="flex-shrink-0 w-8 h-8 rounded-full bg-zinc-800 border border-zinc-700 flex items-center justify-center text-[10px] font-black text-gym-yellow">${i + 1}</span>
                                     <p class="text-sm text-zinc-300 font-medium leading-relaxed">${step}</p>
                                 </li>
                             `).join('')}
                         </ul>
                     </div>
-                </div>`;
+                </div > `;
             document.getElementById('exercise-modal').classList.remove('hidden');
         }
 
@@ -679,30 +738,80 @@
             const input = document.getElementById('ia-input');
             const chatBox = document.getElementById('chat-box');
             const query = input.value.trim();
-            if(!query) return;
+
+            if (!apiKey || apiKey === "TU_API_KEY_AQUI") {
+                chatBox.innerHTML += `<div class="bg-red-900/50 p-4 rounded-xl border border-red-500/50 text-red-200 text-sm">⚠️ Error: Falta la API Key. Configúrala en el código (línea 204).</div>`;
+                return;
+            }
+
+            if (!query) return;
 
             chatBox.innerHTML += `<div class="text-right"><div class="inline-block bg-gym-red/10 p-4 rounded-2xl text-sm font-bold border border-gym-red/20 italic">${query}</div></div>`;
             input.value = "";
-            
+
             const loader = document.createElement('div');
             loader.className = "flex gap-2 p-4 typing-indicator";
             loader.innerHTML = "<span></span><span></span><span></span>";
             chatBox.appendChild(loader);
 
+            // Paso 1: Obtener modelos disponibles (Debugging dinámico)
+            let modelToUse = "gemini-1.5-flash";
             try {
-                const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${apiKey}`, {
-                    method: 'POST', headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ contents: [{ parts: [{ text: query }] }] })
+                const modelsResp = await fetch(`https://generativelanguage.googleapis.com/v1beta/models?key=${apiKey}`);
+                const modelsData = await modelsResp.json();
+                if (modelsData.models) {
+                    const validModels = modelsData.models.filter(m => m.supportedGenerationMethods.includes("generateContent") && m.name.includes("gemini"));
+                    if (validModels.length > 0) {
+                        modelToUse = validModels[0].name.replace("models/", "");
+                        console.log("Modelo seleccionado:", modelToUse);
+                    }
+                    // Debug: Mostrar modelos en el chat si falla
+                    if (validModels.length === 0) {
+                        throw new Error("No se encontraron modelos Gemini disponibles para tu API Key.");
+                    }
+                }
+            } catch (e) {
+                console.warn("No se pudo listar modelos, intentando por defecto:", e);
+            }
+
+            // Paso 2: Usar el modelo encontrado
+            try {
+                const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${modelToUse}:generateContent?key=${apiKey}`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        contents: [{ parts: [{ text: query }] }]
+                    })
                 });
+
+                if (!response.ok) {
+                    const errorDetail = await response.json().catch(() => ({}));
+                    const errorMessage = errorDetail.error?.message || `Error HTTP: ${response.status} ${response.statusText}`;
+                    throw new Error(`Modelo: ${modelToUse} - ${errorMessage}`);
+                }
+
                 const data = await response.json();
                 loader.remove();
-                const reply = data.candidates?.[0]?.content?.parts?.[0]?.text || "Error.";
-                chatBox.innerHTML += `<div class="bg-zinc-800/80 p-6 rounded-3xl border border-zinc-700 text-sm leading-relaxed">${reply}</div>`;
-            } catch (e) { loader.remove(); }
+
+                const reply = data.candidates?.[0]?.content?.parts?.[0]?.text || "No pude generar una respuesta. Verifica tu API Key.";
+
+                // Formatear respuesta (basic markdown to html conversion simple)
+                const formattedReply = reply
+                    .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+                    .replace(/\n/g, '<br>');
+
+                chatBox.innerHTML += `<div class="bg-zinc-800/80 p-6 rounded-3xl border border-zinc-700 text-sm leading-relaxed">${formattedReply}</div>`;
+
+            } catch (e) {
+                loader.remove();
+                console.error(e);
+                chatBox.innerHTML += `<div class="bg-red-900/20 p-4 rounded-xl border border-red-500/30 text-red-300 text-xs">Error de conexión: ${e.message}. Verifica tu API Key y conexión a internet.</div>`;
+            }
             chatBox.scrollTop = chatBox.scrollHeight;
         }
 
         window.onload = () => showSection('inicio');
     </script>
 </body>
+
 </html>
